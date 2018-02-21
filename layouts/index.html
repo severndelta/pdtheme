@@ -1,0 +1,13 @@
+
+  {{ partial "header.html" . }}
+
+  <body>
+
+    <h3>{{ .Site.Params.header.info | markdownify }}</h3>
+
+    {{ range .Data.Pages.ByTitle }}
+        <ul><a href="{{ .Permalink }}">{{ .Title }}</a></ul>
+    {{ end }}
+
+  </body>
+  {{ partial "footer.html" . }}

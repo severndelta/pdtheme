@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+
+  <h1>{{ .Title }}</h1>
+    <h3>Last updated {{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
+
+  {{ .Content }}
+
+  <a href="{{ .Site.BaseURL }}">Back to list</a>
+{{ partial "footer.html" . }}
